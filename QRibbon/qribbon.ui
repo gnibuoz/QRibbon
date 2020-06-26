@@ -1,0 +1,1722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QRibbon</class>
+ <widget class="QMenuBar" name="QRibbon">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>994</width>
+    <height>146</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>146</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="defaultUp">
+   <bool>false</bool>
+  </property>
+  <property name="nativeMenuBar">
+   <bool>false</bool>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_3">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widgetContainer" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>161</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressIndicator {
+  qproperty-color: rgb(2, 65, 132);
+}
+
+
+QToolTip {
+  border: 1px solid rgb(255,255,255);
+  background: white;
+  color: rgb(51, 51, 51);
+}
+
+/**********菜单栏**********/
+QMenuBar {
+  background: rgb(255,255,255);
+  border: 1px solid rgb(255,255,255);
+  border-left: none;
+  border-right: none;
+}
+
+QMenuBar::item {
+  border: 1px solid transparent;
+  padding: 5px 10px 5px 10px;
+  background: transparent;
+}
+
+QMenuBar::item:enabled {
+  color: rgb(2, 65, 132);
+}
+
+QMenuBar::item:!enabled {
+  color: rgb(155, 155, 155);
+}
+
+QMenuBar::item:enabled:selected {
+  border-top-color: rgb(255,255,255);
+  border-bottom-color: rgb(255,255,255);
+  background: rgb(255,255,255);
+}
+
+/**********菜单**********/
+QMenu {
+  border: 1px solid rgb(255,255,255);
+  background: rgb(255,255,255);
+}
+
+QMenu::item:enabled {
+  color: rgb(84, 84, 84);
+}
+
+QMenu::item:!enabled {
+  color: rgb(155, 155, 155);
+}
+
+QMenu::item:enabled:selected {
+  color: rgb(2, 65, 132);
+  background: rgba(255, 255, 255, 200);
+}
+
+QMenu::separator {
+  height: 1px;
+  background: rgb(255,255,255);
+}
+
+/**********状态栏**********/
+QStatusBar {
+  background: rgb(255,255,255);
+  border: 1px solid rgb(255,255,255);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+QStatusBar::item {
+  border: none;
+  border-right: 1px solid rgb(255,255,255);
+}
+
+/**********分组框**********/
+QGroupBox {
+  font-size: 15px;
+  border: 1px solid rgb(43,87,154);
+  border-radius: 4px;
+  margin-top: 14px;
+}
+
+QGroupBox::title {
+  color: rgb(56, 99, 154);
+  top: -12px;
+  left: 10px;
+}
+
+QHeaderView {
+  border: none;
+  border-bottom: 2px solid rgb(43,87,154);
+  background: transparent;
+  min-height: 30px;
+}
+
+QHeaderView::section:horizontal {
+  border: none;
+  color: rgb(2, 65, 132);
+  background: transparent;
+  padding-left: 5px;
+}
+
+QHeaderView::section:horizontal:hover {
+  color: white;
+  background: rgb(0, 78, 161);
+}
+
+QHeaderView::section:horizontal:pressed {
+  color: white;
+  background: rgb(6, 94, 187);
+}
+
+QHeaderView::section:!first {
+  border-left: 1px solid rgba(0, 78, 161, 100);
+}
+
+QHeaderView::up-arrow {
+  width: 13px;
+  height: 11px;
+  padding-right: 5px;
+  image: url(:/White/topArrow);
+  subcontrol-position: center right;
+}
+
+QHeaderView::up-arrow:hover,
+QHeaderView::up-arrow:pressed {
+  image: url(:/White/topArrowHover);
+}
+
+QHeaderView::down-arrow {
+  width: 13px;
+  height: 11px;
+  padding-right: 5px;
+  image: url(:/White/bottomArrow);
+  subcontrol-position: center right;
+}
+
+QHeaderView::down-arrow:hover,
+QHeaderView::down-arrow:pressed {
+  image: url(:/White/bottomArrowHover);
+}
+
+QTableView {
+  border: 1px solid rgb(43,87,154);
+  background: rgb(255,255,255);
+  gridline-color: lightgray;
+}
+
+QTableView::item {
+  padding-left: 5px;
+  padding-right: 5px;
+  border: none;
+  background: white;
+  border-right: 1px solid rgb(255,255,255);
+  border-bottom: 1px solid rgb(255,255,255);
+}
+
+QTableView::item:selected {
+  color: rgba(0, 0, 0, 255);
+  background: rgba(255, 255, 255, 100);
+}
+
+QTableView::item:selected:!active {
+  color: rgb(65, 65, 65);
+}
+
+QTableView::indicator {
+  width: 20px;
+  height: 20px;
+}
+
+QTableView::indicator:enabled:unchecked {
+  image: url(:/White/checkBox);
+}
+
+QTableView::indicator:enabled:unchecked:hover {
+  image: url(:/White/checkBox);
+}
+/*QTableView::indicator:enabled:unchecked:pressed {
+        image: url(:/White/checkBoxPressed);
+}*/
+QTableView::indicator:enabled:checked {
+  image: url(:/White/checkBoxChecked);
+}
+
+QTableView::indicator:enabled:checked:hover {
+  image: url(:/White/checkBoxChecked);
+}
+
+QTableView::indicator:enabled:checked:pressed {
+  image: url(:/White/checkBoxCheckedPressed);
+}
+
+QTableView::indicator:enabled:indeterminate {
+  image: url(:/White/checkBoxIndeterminate);
+}
+
+QTableView::indicator:enabled:indeterminate:hover {
+  image: url(:/White/checkBoxIndeterminateHover);
+}
+
+QTableView::indicator:enabled:indeterminate:pressed {
+  image: url(:/White/checkBoxIndeterminatePressed);
+}
+
+/**********滚动条-水平**********/
+QScrollBar:horizontal {
+  height: 20px;
+  background: transparent;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+QScrollBar::handle:horizontal {
+  height: 20px;
+  min-width: 30px;
+  background: rgb(165, 195, 225);
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+QScrollBar::handle:horizontal:hover {
+  background: rgb(165, 195, 225);
+}
+
+QScrollBar::sub-line:horizontal {
+  width: 15px;
+  background: transparent;
+  image: url(:/White/arrowLeft);
+  subcontrol-position: left;
+}
+
+QScrollBar::add-line:horizontal {
+  width: 15px;
+  background: transparent;
+  image: url(:/White/arrowRight);
+  subcontrol-position: right;
+}
+
+QScrollBar::sub-line:horizontal:hover {
+  background: rgb(255,255,255);
+}
+
+QScrollBar::add-line:horizontal:hover {
+  background: rgb(255,255,255);
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+  background: transparent;
+}
+
+/**********滚动条-垂直**********/
+QScrollBar:vertical {
+  width: 20px;
+  background: transparent;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+QScrollBar::handle:vertical {
+  width: 20px;
+  min-height: 30px;
+  background: rgb(165, 195, 225);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+QScrollBar::handle:vertical:hover {
+  background: rgb(165, 195, 225);
+}
+
+QScrollBar::sub-line:vertical {
+  height: 15px;
+  background: transparent;
+  image: url(:/White/topArrow);
+  subcontrol-position: top;
+}
+
+QScrollBar::add-line:vertical {
+  height: 15px;
+  background: transparent;
+  image: url(:/White/bottomArrow);
+  subcontrol-position: bottom;
+}
+
+QScrollBar::sub-line:vertical:hover {
+  background: rgb(255,255,255);
+}
+
+QScrollBar::add-line:vertical:hover {
+  background: rgb(255,255,255);
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+  background: transparent;
+}
+
+QScrollBar#verticalScrollBar:vertical {
+  margin-top: 30px;
+}
+
+/**********下拉列表**********/
+QComboBox {
+  height: 25px;
+  border-radius: 4px;
+  border: 1px solid rgb(43,87,154);
+  background: transparent;
+}
+
+QComboBox:enabled {
+  color: rgb(84, 84, 84);
+}
+
+QComboBox:!enabled {
+  color: rgb(80, 80, 80);
+}
+
+QComboBox:enabled:hover,
+QComboBox:enabled:focus {
+  color: rgb(51, 51, 51);
+}
+
+QComboBox::drop-down {
+  width: 20px;
+  border: none;
+  background: transparent;
+}
+
+QComboBox::drop-down:hover {
+  background: rgba(255, 255, 255, 30);
+}
+
+QComboBox::down-arrow {
+  width: 10px;
+  height: 10px;
+  image: url(:/White/arrowBottom);
+}
+
+QComboBox::down-arrow:on {
+  /**top: 1px;**/
+}
+
+QComboBox QAbstractItemView {
+  border: 1px solid rgb(255,255,255);
+  background: white;
+  outline: none;
+}
+
+QComboBox QAbstractItemView::item {
+  height: 25px;
+  color: rgb(73, 73, 73);
+}
+
+QComboBox QAbstractItemView::item:selected {
+  background: rgb(255,255,255);
+  color: rgb(2, 65, 132);
+}
+
+/**********进度条**********/
+QProgressBar {
+  border: none;
+  text-align: center;
+  color: white;
+  background: rgb(173, 202, 232);
+}
+
+QProgressBar::chunk {
+  background: rgb(16, 135, 209);
+}
+
+QProgressBar {
+  border: none;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  background-image: url(&quot;:/White/progressBar&quot;);
+  background-repeat: repeat-x;
+}
+
+QProgressBar::chunk {
+  border: none;
+  background-color: transparent;
+  background-image: url(&quot;:/White/progressBarChunk&quot;);
+  background-repeat: repeat-x;
+}
+
+/**********复选框**********/
+QCheckBox {
+  spacing: 5px;
+}
+
+QCheckBox:enabled:checked {
+  color: rgb(2, 65, 132);
+}
+
+QCheckBox:enabled:!checked {
+  color: rgb(70, 71, 73);
+}
+
+QCheckBox:enabled:hover {
+  color: rgb(0, 78, 161);
+}
+
+QCheckBox:!enabled {
+  color: rgb(80, 80, 80);
+}
+
+QCheckBox::indicator {
+  width: 20px;
+  height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+  image: url(:/White/checkBox);
+}
+
+QCheckBox::indicator:unchecked:hover {
+  image: url(:/White/checkBox);
+}
+/*QCheckBox::indicator:unchecked:pressed {
+        image: url(:/White/checkBoxPressed);
+}*/
+QCheckBox::indicator:checked {
+  image: url(:/White/checkBoxChecked);
+}
+
+QCheckBox::indicator:checked:hover {
+  image: url(:/White/checkBoxChecked);
+}
+/*QCheckBox::indicator:checked:pressed {
+        image: url(:/White/checkBoxCheckedPressed);
+}
+QCheckBox::indicator:indeterminate {
+        image: url(:/White/checkBoxIndeterminate);
+}*/
+/*QCheckBox::indicator:indeterminate:hover {
+        image: url(:/White/checkBoxIndeterminateHover);
+}*/
+/*QCheckBox::indicator:indeterminate:pressed {
+        image: url(:/White/checkBoxIndeterminatePressed);
+}*/
+
+/**********单选框**********/
+QRadioButton {
+  spacing: 5px;
+}
+
+QRadioButton:enabled:checked {
+  color: rgb(2, 65, 132);
+}
+
+QRadioButton:enabled:!checked {
+  color: rgb(70, 71, 73);
+}
+
+QRadioButton:enabled:hover {
+  color: rgb(0, 78, 161);
+}
+
+QRadioButton:!enabled {
+  color: rgb(80, 80, 80);
+}
+
+QRadioButton::indicator {
+  width: 20px;
+  height: 20px;
+}
+
+QRadioButton::indicator:unchecked {
+  image: url(:/White/radioButton);
+}
+
+QRadioButton::indicator:unchecked:hover {
+  image: url(:/White/radioButton);
+}
+
+QRadioButton::indicator:unchecked:pressed {
+  image: url(:/White/radioButton);
+}
+
+QRadioButton::indicator:checked {
+  image: url(:/White/radioButtonChecked);
+}
+
+QRadioButton::indicator:checked:hover {
+  image: url(:/White/radioButtonChecked);
+}
+
+QRadioButton::indicator:checked:pressed {
+  image: url(:/White/radioButtonChecked);
+}
+
+/**********输入框**********/
+QLineEdit {
+  border-radius: 4px;
+  height: 25px;
+  border: 1px solid rgb(43,87,154);
+  background: white;
+}
+
+QLineEdit:enabled {
+  color: rgb(84, 84, 84);
+}
+
+QLineEdit:enabled:hover,
+QLineEdit:enabled:focus {
+  color: rgb(51, 51, 51);
+}
+
+QLineEdit:!enabled {
+  color: rgb(80, 80, 80);
+}
+
+/**********文本编辑框**********/
+QTextEdit {
+  border: 1px solid rgb(43,87,154);
+  color: rgb(70, 71, 73);
+  background: rgb(255,255,255);
+}
+
+/**********滚动区域**********/
+QScrollArea {
+  border: 1px solid rgb(43,87,154);
+  background: rgb(255,255,255);
+}
+
+
+/**********微调器**********/
+QSpinBox,
+QDoubleSpinBox {
+  border-radius: 4px;
+  min-height: 24px;
+  min-width: 40px;
+  border: 1px solid rgb(43,87,154);
+  background: white;
+}
+
+QSpinBox:enabled,
+QDoubleSpinBox:enabled {
+  color: rgb(60, 60, 60);
+}
+
+QSpinBox:enabled:hover,
+QSpinBox:enabled:focus {
+  color: rgb(51, 51, 51);
+}
+
+QSpinBox:!enabled,
+QDoubleSpinBox:!enabled {
+  color: rgb(210, 210, 210);
+  background: transparent;
+}
+
+QSpinBox::up-button,
+QDoubleSpinBox::up-button {
+  subcontrol-origin: border;
+  subcontrol-position: top right; /* position at the top right corner */
+  /* border-left: 1px solid rgb(255,255,255); */
+  width: 18px;
+  height: 12px;
+  border-top-right-radius: 4px;
+  image: url(:/White/topArrow);
+}
+
+QSpinBox::up-button:!enabled {
+  background: transparent;
+}
+
+QSpinBox::up-button:enabled:hover {
+  background: rgb(255, 255, 255, 30);
+}
+
+QSpinBox::down-button,
+QDoubleSpinBox::down-button {
+  /* border-left: 1px solid rgb(255,255,255); */
+  width: 18px;
+  height: 12px;
+  border-bottom-right-radius: 4px;
+  image: url(:/White/bottomArrow);
+  subcontrol-origin: border;
+  subcontrol-position: bottom right; /* position at bottom right corner */
+}
+
+QSpinBox::down-button:!enabled {
+  background: transparent;
+}
+
+QSpinBox::down-button:hover {
+  background: rgb(255, 255, 255, 30);
+}
+
+
+/**********按钮**********/
+QToolButton#nsccButton {
+  border: none;
+  color: rgb(2, 65, 132);
+  background: transparent;
+  padding: 10px;
+  qproperty-icon: url(:/White/nscc);
+  qproperty-iconsize: 32px 32px;
+  qproperty-toolbuttonstyle: ToolButtonTextUnderIcon;
+}
+
+QToolButton#nsccButton:hover {
+  background: rgb(255,255,255);
+}
+
+QToolButton#transferButton {
+  border: none;
+  color: rgb(2, 65, 132);
+  background: transparent;
+  padding: 10px;
+  qproperty-icon: url(:/White/transfer);
+  qproperty-iconsize: 32px 32px;
+  qproperty-toolbuttonstyle: ToolButtonTextUnderIcon;
+}
+
+
+/**********按钮**********/
+QPushButton {
+  border-radius: 4px;
+  border: none;
+  width: 75px;
+  height: 25px;
+}
+
+QPushButton:enabled {
+  background: rgb(120, 170, 220);
+  color: white;
+}
+
+QPushButton:!enabled {
+  background: rgb(180, 180, 180);
+  color: white;
+}
+
+QPushButton:enabled:hover {
+  background: rgb(100, 160, 220);
+}
+
+QPushButton:enabled:pressed {
+  background: rgb(0, 78, 161);
+}
+
+/*****************标题栏按钮*******************/
+QDockWidget {
+  font-weight: bold;
+  color: white;
+}
+
+/* 标题设置 */
+QDockWidget::title {
+  text-align: left;
+  color: white;
+  background: rgb(255,255,255);
+  padding-left: 10px;
+}
+
+QSlider::groove {
+  background: rgb(232, 241, 252);
+  border: 1px solid #999999;
+}
+
+QSlider::add-page {
+  background: rgb(232, 241, 252);
+  border: 1px solid rgb(255,255,255);
+}
+
+QSlider::sub-page {
+  background: rgba(111, 156, 207, 160);
+}
+
+QSlider::groove:horizontal {
+  height: 3px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+  margin: 1px 0;
+}
+
+QSlider::groove:vertical {
+  width: 6px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+  margin: 0 1px;
+}
+
+QSlider::handle {
+  background: rgb(255,255,255);
+  border: 1px solid rgb(255,255,255);
+  border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+  width: 8px;
+  margin: -6px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+}
+
+QSlider::handle:vertical {
+  height: 8px;
+  margin: 0 -6px; /* expand outside the groove */
+}
+
+QToolBox:tab {
+  color: #eee;
+  background: rgb(255,255,255);
+  border: 1px solid rgb(255,255,255);
+}
+
+QToolBox:tab:selected {
+  font-weight: bold;
+  background: rgb(60, 110, 150);
+  color: white;
+  font-weight: bold;
+}
+
+QToolBox QWidget {
+  margin: 0;
+  padding: 0;
+  border: 0px solid rgb(255,255,255);
+}
+
+/* * {
+  qproperty-normalColor: rgb(65, 65, 65);
+  qproperty-disableColor: rgb(180, 180, 180);
+  qproperty-highlightColor: rgb(0, 160, 230);
+  qproperty-errorColor: red;
+} */
+
+
+QTreeView {
+  show-decoration-selected: 0;
+  border: 1px solid rgb(43,87,154);
+  background: rgb(255,255,255);
+}
+
+QTreeView QHeaderView:section {
+  height: 36px;
+}
+
+QTreeView::indicator:checked {
+  image: url(:/Resource/icon/eye.png);
+}
+
+QTreeView::indicator:unchecked {
+  image: url(:/Resource/icon/eyeClosed.png);
+}
+
+QTreeView::indicator:indeterminate {
+  image: url(:/Resource/icon/eyeClosed.png);
+}
+
+/*
+QTreeView::item,QTreeWidget::item {
+    height: 25px;
+    color: #eee;
+    border: none;
+    background-color: rgba(100,100,100,0);
+}
+
+QTreeView::item:hover, QTreeView::branch:hover,
+QTreeWidget::item:hover, QTreeWidget::branch:hover { 
+    background-color: rgba(100, 100, 100, 40);
+}
+
+QTreeView::item:selected { 
+    background-color: rgba(200, 200, 200, 50);
+    font-weight:bold;
+}*/
+
+QTreeView::branch,
+QTreeWidget::branch {
+    background: transparent;
+}
+
+QTreeView::branch:has-siblings:!adjoins-item,
+QTreeWidget::branch:has-siblings:!adjoins-item {
+    border-image: url(:/Resource/icon/vline.png) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item,
+QTreeWidget::branch:has-siblings:adjoins-item {
+    border-image: url(:/Resource/icon/branch-more.png) 0;
+    
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item,
+QTreeWidget::branch:!has-children:!has-siblings:adjoins-item{
+    border-image: url(:/Resource/icon/branch-end.png) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings,
+QTreeWidget::branch:has-children:!has-siblings:closed,
+QTreeWidget::branch:closed:has-children:has-siblings 
+{
+    border-image: none;
+    image: url(:/Resource/icon/branch-closed.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings,
+QTreeWidget::branch:open:has-children:!has-siblings,
+QTreeWidget::branch:open:has-children:has-siblings  {
+   border-image: none;
+   image: url(:/Resource/icon/branch-open.png);
+}
+
+
+/*去除焦点虚线框*/
+QWidget:focus
+{
+    outline: none;
+}
+
+
+QListView {
+  show-decoration-selected: 0;
+  border: 1px solid rgb(43,87,154);
+  background: rgb(255,255,255);
+}
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////*/
+
+
+
+  QMainWindow::separator {
+      background:rgb(224,224,224);
+      width: 1px; /* when vertical */
+      height: 1px; /* when horizontal */
+  }
+
+  QMainWindow::separator:hover {
+      border-color:rgb(43,87,154);
+      color:rgb(43,87,154);
+
+
+  }
+
+
+QWidget#widgetContainer,QWidget#widgetContainer &gt; *{
+
+	background:rgb(33,115,70);
+	background:rgb(183,71,42);
+	background:rgb(43,87,154);
+	color:#fff;
+	font-family:'simhei';
+	font-size:11pt;
+}
+
+QTabBar{
+	background:rgb(43,87,154);
+}
+
+
+QTabBar::tab {
+      background:rgb(43,87,154);
+      min-width: 12ex;
+      padding: 2px;
+	  height:24px;
+	  padding:2px 12px;
+	  color:#fff;
+  }
+
+QTabBar::tab:selected {
+      background: rgb(243,243,243);
+	  color: rgb(10, 10, 10);
+color: rgb(10, 10, 10);
+color: rgb(43,87,154);
+
+  }
+
+QTabBar::tab:hover:!selected {
+     background:rgba(0,0,0,40);
+  }
+
+
+
+QTabBar::tab:selected {
+      border-color: #9B9B9B;
+      border-bottom-color: #C2C7CB; /* same as pane color */
+  }
+
+QTabBar::tab:!selected {
+      margin-top: 0px; /* make non-selected tabs look smaller */
+  }
+
+
+
+
+QDockWidget {
+     border: 1px solid rgb(255,0,255);
+	 margin:0px;
+	 color:rgb(240,240,240);
+     background: #fff;
+	color:rgb(10,10,10);
+color:#eee;
+	titlebar-close-icon: url(:/Resources/icon/dockwidget-close.png);
+     titlebar-normal-icon: url(:/Resources/icon/dockwidget-float.png);
+ }
+
+ QDockWidget::title {
+     text-align: left; /* align the text to the left */
+     background: rgb(230,230,230);
+    background:rgb(43,87,154);
+	 padding:6px 4px;
+	 font-size:30pt;
+
+
+ }
+
+ QDockWidget::close-button, QDockWidget::float-button {
+     border: 1px solid transparent;
+     width: 24px;
+	 height:24px;
+ }
+
+QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+      background: rgb(177,177,177);
+	background:rgba(0,0,0,40);
+}
+
+QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
+     padding: 1px -1px -1px 1px;
+background:rgba(0,0,0,80);
+ }
+
+ QDockWidget::close-button {
+      subcontrol-position: top right;
+      subcontrol-origin: margin;
+	top:-1px;
+	right:4px;
+      position: absolute;
+  }
+
+ QDockWidget::float-button {
+      subcontrol-position: top right;
+      subcontrol-origin: margin;
+	top:-1px;
+      position: absolute;
+	right:26px;
+  }
+
+
+QMainWindow QWidget#centralwidget{
+	background:white;
+}
+
+
+
+/*Qmenu Style Sheets*/
+QMenu {
+    background-color: rgb(243,243,243); /* sets background of the menu 设置整个菜单区域的背景色，我用的是白色：white*/
+    border: 1px solid rgb(226,241,250);/*整个菜单区域的边框粗细、样式、颜色*/
+
+}
+ 
+QMenu::item {
+    /* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */
+    background-color: transparent;
+    padding:3px 25px;/*设置菜单项文字上下和左右的内边距，效果就是菜单中的条目左右上下有了间隔*/
+    margin:0px 2px;/*设置菜单项的外边距*/
+    /*border-bottom:1px solid #DBDBDB;为菜单项之间添加横线间隔*/
+	color:rgb(10,10,10);
+	font-weight:bold;
+}
+ 
+QMenu::item:selected { /* when user selects item using mouse or keyboard */
+    background-color: rgb(177,177,177);/*这一句是设置菜单项鼠标经过选中的样式*/
+color:rgb(10,10,10);
+}
+
+
+QWidget#widgetContainer{
+	margin:0;
+	padding:0;
+}
+
+
+/*
+QTabWidget:pane,QWidget#widgetMenuBar{
+	border-bottom:1px solid rgb(224,224,224);
+}
+*/
+
+
+QWidget#widgetBottomBar{
+border-bottom:1px solid blue;
+	background:blue;
+	
+}
+
+
+
+QTabWidget .QWidget{ 
+
+background: rgb(243,243,243);
+
+}
+
+QToolTip{
+	color:black;
+}
+
+ QTabWidget#tabWidgetMenuBar::pane { /* The tab widget frame */
+      border-top: 0px solid #eee;
+border-width:0;
+	 background: rgb(243,243,243);
+	padding:1px 1px;
+  }
+
+  QTabWidget#tabWidgetMenuBar::tab-bar {
+      left: 2px; /* move to the right by 5px */
+	/*height:32px;*/
+border-width:0;
+
+  }
+
+/*QTabWidget#tabWidgetMenuBar QTabBar {
+      background: rgb(255,0,0);
+  }*/
+
+  /* Style the tab using the tab sub-control. Note that
+      it reads QTabBar _not_ QTabWidget */
+  QTabWidget#tabWidgetMenuBar QTabBar::tab {
+      background: transparent;
+      min-width: 12ex;
+      padding: 2px;
+	  height:30px;
+	  padding:2px 12px;
+	  color:#fff;
+border-width:0;
+  }
+
+  QTabWidget#tabWidgetMenuBar QTabBar::tab:selected {
+      background: rgb(243,243,243);
+	  color: rgb(10, 10, 10);
+color: rgb(10, 10, 10);
+color: rgb(183,71,42);
+	color:rgb(43,87,154);
+  }
+
+QTabWidget#tabWidgetMenuBar QTabBar::tab:hover:!selected {
+     background:rgba(0,0,0,40);
+  }
+
+
+
+ QTabWidget#tabWidgetMenuBar QTabBar::tab:selected {
+      border-color: #9B9B9B;
+      border-bottom-color: #C2C7CB; /* same as pane color */
+  }
+
+  QTabWidget#tabWidgetMenuBar QTabBar::tab:!selected {
+      margin-top: 0px; /* make non-selected tabs look smaller */
+  }
+
+
+QWidget#widgetContent{
+	background:white;
+}
+
+QToolButton{
+	background:transparent;
+	border:0px solid gray;
+	color: rgb(10, 10, 10);
+	margin:0;
+}
+
+QToolButton{
+	padding-bottom:10px;
+}
+
+QToolButton:hover,QToolButton:checked{
+	border:1px solid rgba(100,100,100,100);
+	border-radius:2px;
+	background:rgb(198,198,198);
+}
+
+QToolButton::menu-button {
+    
+      /* 16px width + 4px for border = 20px allocated above */
+      width: 16px;
+	subcontrol-origin:margin;
+subcontrol-position: bottom center;
+	bottom:0px;
+	left:0px;
+	height:10px;
+	width:100%
+ }
+
+
+
+QMenu {
+
+    border: 1px solid rgb(226,241,250);
+}
+ 
+QMenu::item {
+    background-color: transparent;
+    padding:3px 25px;
+    margin:0px 2px;
+	color:rgb(240,240,240);
+	font-weight:bold;
+}
+QMenu::item:selected { 
+    background-color: #999999;
+}
+
+
+QPushButton,QPushButton#pushButtonStyle,QPushButton#pushButtonMinimizeTab,QPushButton#pushButtonClose,QPushButton#pushButtonFullScreen,QPushButton#pushButtonMinimum{
+	background:transparent;
+	font-weight:bold;
+	margin:0px;
+	border:0px solid #fff;
+	outline:none;
+}
+
+QPushButton:hover,QPushButton#pushButtonFullScreen:hover,QPushButton#pushButtonMinimum:hover{
+	background:rgba(0,0,0,40);
+}
+
+QPushButton:pressed,QPushButton#pushButtonFullScreen:pressed,QPushButton#pushButtonMinimum:pressed{
+	background:rgba(0,0,0,80);
+	padding-top:3px;
+}
+
+QPushButton#pushButtonClose:hover{
+	background:rgba(232,17,35,255);
+}
+
+QPushButton#pushButtonClose:pressed{
+	background:rgba(232,17,35,200);
+}
+
+QPushButton#pushButtonMinimizeTab{
+	color: rgb(112, 112, 112);
+}
+
+QPushButton#pushButtonMinimizeTab:hover{
+	background:rgb(177,177,177);
+}
+
+
+ QPushButton::menu-indicator {
+      image: none;
+      subcontrol-origin: padding;
+      subcontrol-position: bottom right;
+  }</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,10,1">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayoutTitleBar">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="leftMargin">
+         <number>100</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="labelTitle">
+          <property name="text">
+           <string>这是标题</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonStyle">
+          <property name="minimumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 16pt &quot;黑体&quot;;</string>
+          </property>
+          <property name="text">
+           <string>☺</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonMinimum">
+          <property name="minimumSize">
+           <size>
+            <width>46</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>36</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>―</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonFullScreen">
+          <property name="minimumSize">
+           <size>
+            <width>46</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>36</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>☐</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonClose">
+          <property name="minimumSize">
+           <size>
+            <width>46</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>36</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>×</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QWidget" name="widgetMenuBar_2" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>90</width>
+            <height>34</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>34</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="leftMargin">
+            <number>61</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>2</number>
+           </property>
+           <property name="bottomMargin">
+            <number>2</number>
+           </property>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2">
+         <widget class="QTabWidget" name="tabWidgetMenuBar">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>34</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>6666</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="currentIndex">
+           <number>5</number>
+          </property>
+          <property name="elideMode">
+           <enum>Qt::ElideNone</enum>
+          </property>
+          <property name="tabBarAutoHide" stdset="0">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>文件</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QToolButton" name="toolButton_4">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>打开</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>E:/workspace/UMVision/UMVision/icon/folder-open.png</normaloff>E:/workspace/UMVision/UMVision/icon/folder-open.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="popupMode">
+               <enum>QToolButton::MenuButtonPopup</enum>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+              <property name="arrowType">
+               <enum>Qt::NoArrow</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_5">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>粘贴</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>E:/workspace/UMVision/UMVision/icon/paste.png</normaloff>E:/workspace/UMVision/UMVision/icon/paste.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="popupMode">
+               <enum>QToolButton::MenuButtonPopup</enum>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+              <property name="arrowType">
+               <enum>Qt::NoArrow</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line">
+              <property name="minimumSize">
+               <size>
+                <width>1</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>1</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-color:rgb(177,177,177);
+background-color:rgb(177,177,177);
+color:rgb(177,177,177);
+width:2px;</string>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_6">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>退出</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>E:/workspace/UMVision/UMVision/icon/close.png</normaloff>E:/workspace/UMVision/UMVision/icon/close.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="popupMode">
+               <enum>QToolButton::DelayedPopup</enum>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+              <property name="arrowType">
+               <enum>Qt::NoArrow</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="toolButton_7">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>退出</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>E:/workspace/UMVision/UMVision/icon/close.png</normaloff>E:/workspace/UMVision/UMVision/icon/close.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <property name="popupMode">
+               <enum>QToolButton::DelayedPopup</enum>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonTextUnderIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+              <property name="arrowType">
+               <enum>Qt::NoArrow</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>903</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>编辑</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>窗体</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>视图</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_5">
+           <attribute name="title">
+            <string>设置</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_6">
+           <attribute name="title">
+            <string>帮助</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QWidget" name="widgetMenuBar" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>90</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">.QWidget{
+background: rgb(243,243,243);
+border-left:1px solid gray;
+}</string>
+          </property>
+          <widget class="QPushButton" name="pushButtonMinimizeTab">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>60</y>
+             <width>24</width>
+             <height>14</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>14</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>14</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>⮝</string>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QWidget" name="widgetBottomBar" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>1</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>1</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <signal>vgminimazed()</signal>
+  <signal>vgclose()</signal>
+ </slots>
+</ui>

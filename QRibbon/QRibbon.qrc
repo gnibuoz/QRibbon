@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="White/bottomArrow">Resource/icon/add_bottom.png</file>
+        <file alias="White/arrowLeft">Resource/icon/add_left.png</file>
+        <file alias="White/arrowRight">Resource/icon/add_right.png</file>
+        <file alias="White/topArrow">Resource/icon/add_top.png</file>
+        <file>Resource/icon/branch_close.png</file>
+        <file>Resource/icon/branch_open.png</file>
+        <file>Resource/icon/calendar_nextmonth.png</file>
+        <file>Resource/icon/calendar_prevmonth.png</file>
+        <file alias="White/checkBoxChecked">Resource/icon/checkbox_checked.png</file>
+        <file>Resource/icon/checkbox_checked_disable.png</file>
+        <file>Resource/icon/checkbox_parcial.png</file>
+        <file>Resource/icon/checkbox_parcial_disable.png</file>
+        <file alias="White/checkBox">Resource/icon/checkbox_unchecked.png</file>
+        <file>Resource/icon/checkbox_unchecked_disable.png</file>
+        <file alias="White/radioButtonChecked">Resource/icon/radiobutton_checked.png</file>
+        <file>Resource/icon/radiobutton_checked_disable.png</file>
+        <file alias="White/radioButton">Resource/icon/radiobutton_unchecked.png</file>
+        <file>Resource/icon/radiobutton_unchecked_disable.png</file>
+        <file alias="White/arrowBottom">Resource/icon/arrowBottom.png</file>
+        <file>Resource/icon/eye.png</file>
+        <file>Resource/icon/eyeClosed.png</file>
+        <file>Resource/icon/branch-closed.png</file>
+        <file>Resource/icon/branch-end.png</file>
+        <file>Resource/icon/branch-more.png</file>
+        <file>Resource/icon/branch-open.png</file>
+        <file>Resource/icon/vline.png</file>
+        <file>Resource/icon/unknow.png</file>
+    </qresource>
+</RCC>
