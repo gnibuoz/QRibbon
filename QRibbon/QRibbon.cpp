@@ -239,9 +239,13 @@ void QRibbon::install(QMainWindow *window)
     {
         return;
     }
+    
+#ifdef Q_OS_OSX
+	window->menuBar()->setNativeMenuBar(false);
+#endif
 
-    auto _ribbonWidget = new QRibbon();
-    _ribbonWidget->initialize(window);
+    auto ribbonWidget = new QRibbon();
+    ribbonWidget->initialize(window);
 }
 
 void QRibbon::setColor(const QString &colorName)
