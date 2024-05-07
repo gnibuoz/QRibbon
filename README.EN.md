@@ -1,6 +1,6 @@
 # QRibbon
 
-A Ribbon-style menu bar implemented in Qt, the basic idea is to customize QTabWidget and adjust the display style through QSS (style sheet). The principle of QRibbon is to minimize intrusion into normal business logic development. Therefore, when developing programs based on QMainWindow, you can create interfaces, create normal menu bars and menu items, and associate their signal slots as usual. Finally, call the `QRibbon::install(&amp;mainWindow)` function to automatically create a Ribbon corresponding to the original QMenuBar of QMainWindow...
+A Ribbon-style menu bar implemented in Qt, the basic idea is to customize QTabWidget and adjust the display style through QSS (style sheet). The principle of QRibbon is to minimize intrusion into normal business logic development. Therefore, when developing programs based on QMainWindow, you can create interfaces, create normal menu bars and menu items, and associate their signal slots as usual. Finally, call the `QRibbon::install(&mainWindow)` function to automatically create a Ribbon corresponding to the original QMenuBar of QMainWindow...
 
 ## Usage
 * Create a QMainWindow as usual.
